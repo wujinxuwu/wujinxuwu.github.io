@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <meta charset="utf-8" />
+    <title>Homework4</title>
+  </head>
+  <body>
+    <svg id="squares" width="500" height="100"></svg>
+    <svg id="squares2" width="500" height="150">
+        <rect x="0" y="0" width="30" height="10" fill="black"/>
+        <rect x="0" y="20" width="30" height="10" fill="black"/>
+        <rect x="0" y="40" width="30" height="10" fill="black"/>
+        <rect x="0" y="60" width="30" height="10" fill="black"/>
+        <rect x="0" y="80" width="30" height="10" fill="black"/>
+        <rect x="0" y="100" width="30" height="10" fill="black"/>
+        <rect x="0" y="120" width="30" height="10" fill="black"/>
+    </svg>
+       
+    
+    <script>
+        var dataArray = [10, 8, 6, 4, 2]
+       
+        
+     
+        function createBarGraph() {
+            var updates = d3.select("#squares2")
+                .selectAll("rect")
+                .data(dataArray);
+            updates.enter()
+                .append("rect")
+                .merge(updates)
+                .attr("height", 10)
+                .attr("width", (d) => d * (40))
+                .attr("x", 0)
+                .attr("y", (d, i) => i * 20)
+                .attr("fill", "blue");
+
+            updates.exit().remove();
+            }
+            </script>
+
+    <button onclick="createBarGraph()">Bind Data</button>
+
+
+    }
+    
+  </body>
+</html>
