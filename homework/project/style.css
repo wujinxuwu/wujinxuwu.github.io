@@ -20,10 +20,10 @@ span:nth-child(2) {
 
 #country-info {
   color: #666;
-  font-size: 28px;
+  font-size: 30px;
   position: absolute;
-  top: 60px;
-  left: 40px;
+  top: 275px;
+  left: 160px;
 }
 
 svg {

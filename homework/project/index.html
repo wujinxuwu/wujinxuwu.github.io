@@ -14,18 +14,27 @@
   <title>Population Data</title>
 </head>
 <body>
+  <h1>World population bubble chart</h1><br>
 
+  <body>The diameters of the bubbles indicate the population</body><br>
+  <body>The colors indicate the content that the country in</body><br>
+  <h1> </h1>
 <div id="controls">
   <span>
-    <label><input id="combine" type="radio" name="grouping" value="combine" checked>Combine</label>
-    <label><input id="continents" type="radio" name="grouping" value="continents">Continents</label>
-    <label><input id="country-centers" type="radio" name="grouping" value="country-centers">Country Centers</label>
-    <label><input id="population" type="radio" name="grouping" value="population">Population</label>
+    <body><b>Show Data by:</b></body>
+    <label><input id="continents" type="radio" name="grouping" value="continents">Clustered in Continents</label>
+    <label><input id="country-centers" type="radio" name="grouping" value="country-centers">Location in Map</Map></label>
+    <label><input id="population" type="radio" name="grouping" value="population">"Bar Chart"</label>
   </span>
+  <br>
   <span>
-    <label><input id="colors" type="radio" name="fill" value="colors" checked>Colors</label>
-    <label><input id="flags" type="radio" name="fill" value="flags">Flags</label>
+    <body><b>Show Countries in:</b></body>
+    <label><input id="colors" type="radio" name="fill" value="colors" checked>Colors by Continent</label>
+    <label><input id="flags" type="radio" name="fill" value="flags">Flags</label><br>
   </span>
+  <h1> </h1><br>
+  <h1> </h1><br>
+
 </div>
 <div id="country-info"></div>
 <div id="bubble-chart"></div>
