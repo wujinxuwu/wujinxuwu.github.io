@@ -78,8 +78,8 @@ function createBubbleChart(error, countries, continentNames) {
           d3.selectAll("g.continent-key-element")
             .append("text")
               .attr("text-anchor", "middle")
-              .attr("x", function(d) { return continentKeyScale(d) + keyElementWidth/2; })
-              .text(function(d) { return continentNames[d]; });
+              .attr("x", function(d) {return continentKeyScale(d) + keyElementWidth/2; })
+              .text(function(d) {return continentNames[d]; });
     
 
           d3.selectAll("g.continent-key-element text")
