@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Bar Chart</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+    <svg id="chart"></svg>
+    <script>
+
+        var url = "https://whiteboard.datawheel.us/api/google-analytics/realtime/random";
+        var frequency = 10 * 1000; // 10 seconds
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+
+        var svg = d3.select("#chart")
+            .attr("width", width)
+            .attr("height", height);
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+
+        var svg = d3.select("#chart")
+  .attr("width", width)
+  .attr("height", height);
+
+        function fetchData() {
+      
+          d3.json(url)
+            .then(function(users) {
+              // we'll enter/update/exit the bars here
+            });
+      
+        }
+      
+        fetchData();
+        setInterval(fetchData, frequency);
+    </script>
+  </body>
+</html>
